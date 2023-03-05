@@ -33,7 +33,7 @@
         text-align: center;
       }
       .attribution a {
-        color: hsl(228, 45%, 44%);
+        color: white;
       }
     </style>
   </head>
@@ -45,30 +45,32 @@
           alt="card background image"
           class="card__background"
         />
-        <img
-          src="/images/image-victor.jpg"
-          alt="user avatar"
-          class="card__avatar"
-        />
         <div class="card__user">
-          <h1 class="card__name">Victor Crest</h1>
-          <span class="card__age">26</span>
+          <img
+            src="/images/image-victor.jpg"
+            alt="user avatar"
+            class="card__avatar"
+          />
+          <div class="card__details">
+            <h1 class="card__name">Victor Crest</h1>
+            <span class="card__age">26</span>
+          </div>
+          <span class="card__location">London</span>
         </div>
-        <span class="card__location">London</span>
       </section>
 
       <section class="card__bottom">
         <div class="card__socials">
           <h2 class="card__count">80K</h2>
-          Followers
+          <span class="card__label">Followers</span>
         </div>
         <div class="card__socials">
           <h2 class="card__count">803K</h2>
-          Likes
+          <span class="card__label">Likes</span>
         </div>
         <div class="card__socials">
           <h2 class="card__count">1.4K</h2>
-          Photos
+          <span class="card__label">Photos</span>
         </div>
       </section>
     </main>

@@ -12,11 +12,133 @@ $--neutral-200: hsl(0, 0%, 59%);
 
 // ### Body Copy
 
-$--fs-base : 18px;
+$--fs-base: 18px;
 
 // ### Font
 
-$--ff-base:  'Kumbh Sans', sans-serif;
+$--ff-base: 'Kumbh Sans', sans-serif;
 
-$--fw-regular : 400;
+$--fw-regular: 400;
 $--fw-bold: 700;
+
+// mixins
+
+@mixin flex($direction, $gap) {
+  display: flex;
+  flex-direction: $direction;
+  gap: $gap;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: $--ff-base;
+}
+
+html {
+  font-size: $--fs-base;
+}
+
+body {
+  @include flex(column, 0);
+  min-height: 100vh;
+
+  justify-content: center;
+  align-items: center;
+
+  background-color: $--primary-400;
+
+  background-image: url(/images/bg-pattern-top.svg),
+    url(/images/bg-pattern-bottom.svg);
+  background-position: 125% 240%, -15% -155%;
+  background-repeat: no-repeat;
+}
+
+.card {
+  @include flex(column, 0);
+  background-color: white;
+  max-width: 375px;
+  border-radius: 1rem;
+  overflow: hidden;
+
+  margin: 1.5rem;
+
+  &__top {
+    @include flex(column, 0);
+    align-items: center;
+  }
+
+  &__user {
+    @include flex(column, 0);
+    align-items: center;
+    justify-self: flex-start;
+
+    position: relative;
+    top: -3rem;
+  }
+
+  &__avatar {
+    border: 0.3rem solid white;
+    border-radius: 50%;
+  }
+
+  &__details {
+    @include flex(row, 0.5rem);
+    position: relative;
+    top: 1.25rem;
+  }
+
+  &__name {
+    color: $--primary-800;
+    font-weight: $--fw-bold;
+  }
+  &__age {
+    color: $--primary-600;
+  }
+
+  &__location {
+    color: $--neutral-200;
+    font-size: 0.75rem;
+    font-weight: bold;
+
+    position: relative;
+    top: 1.75rem;
+  }
+
+  &__bottom {
+    @include flex(row, 0);
+    justify-content: space-around;
+    padding: 1.5rem;
+
+    border-top: 1px solid rgba($--neutral-200, 0.3);
+  }
+
+  &__socials {
+    @include flex(column, 0.5rem);
+    align-items: center;
+  }
+
+  &__count {
+    color: $--primary-800;
+    font-weight: $--fw-bold;
+  }
+
+  &__label {
+    color: $--primary-600;
+    font-size: 0.5rem;
+    // font-weight: $--fw-bold;
+    letter-spacing: 0.1rem;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  body {
+    background-image: url(/images/bg-pattern-top.svg),
+      url(/images/bg-pattern-bottom.svg);
+    background-position: -25% 240%, 135% -155%;
+  }
+}
+
+footer {
+  position: absolute;
+  bottom: 1rem;
+}

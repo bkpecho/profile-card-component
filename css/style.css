@@ -1,1 +1,106 @@
-/*# sourceMappingURL=style.css.map */
+* {
+  box-sizing: border-box;
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+html {
+  font-size: 18px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(185, 75%, 39%);
+  background-image: url(/images/bg-pattern-top.svg), url(/images/bg-pattern-bottom.svg);
+  background-position: 125% 240%, -15% -155%;
+  background-repeat: no-repeat;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  background-color: white;
+  max-width: 375px;
+  border-radius: 1rem;
+  overflow: hidden;
+  margin: 1.5rem;
+}
+.card__top {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  align-items: center;
+}
+.card__user {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  align-items: center;
+  justify-self: flex-start;
+  position: relative;
+  top: -3rem;
+}
+.card__avatar {
+  border: 0.3rem solid white;
+  border-radius: 50%;
+}
+.card__details {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  position: relative;
+  top: 1.25rem;
+}
+.card__name {
+  color: hsl(229, 23%, 23%);
+  font-weight: 700;
+}
+.card__age {
+  color: hsl(227, 10%, 46%);
+}
+.card__location {
+  color: hsl(0, 0%, 59%);
+  font-size: 0.75rem;
+  font-weight: bold;
+  position: relative;
+  top: 1.75rem;
+}
+.card__bottom {
+  display: flex;
+  flex-direction: row;
+  gap: 0;
+  justify-content: space-around;
+  padding: 1.5rem;
+  border-top: 1px solid rgba(150, 150, 150, 0.3);
+}
+.card__socials {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+}
+.card__count {
+  color: hsl(229, 23%, 23%);
+  font-weight: 700;
+}
+.card__label {
+  color: hsl(227, 10%, 46%);
+  font-size: 0.5rem;
+  letter-spacing: 0.1rem;
+}
+
+@media screen and (min-width: 1000px) {
+  body {
+    background-image: url(/images/bg-pattern-top.svg), url(/images/bg-pattern-bottom.svg);
+    background-position: -25% 240%, 135% -155%;
+  }
+}
+footer {
+  position: absolute;
+  bottom: 1rem;
+}/*# sourceMappingURL=style.css.map */
